@@ -213,7 +213,7 @@ sub write {
 	}
 	my $name = $1;
 	my @users = $this->alias($name);
-	next if !defined @users;
+	next if not @users;
 	print $fh $this->joinwrap(80, "$name: ", "\t", ",", ",", @users), "\n"
 		or return 0;
     }
